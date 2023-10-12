@@ -1,0 +1,68 @@
+.view--cases {
+    background-color: $bg-yellow;
+
+    position: relative;
+    padding-top: $space-top;
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .qr-code-reveal {
+        top: 165px;
+    }
+
+    .view--cases__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .view--cases__column {
+        position: relative;
+        display: block;
+
+        &.view--cases__column--b2c {
+            width: 967px;
+            height: 719px;
+            margin-top: -10px;
+            opacity: 1;
+        }
+
+        &.view--cases__column--b2b {
+            width: 954px;
+            height: 719px;
+
+            .view--cases__box {
+                left: 312px;
+            }
+        }
+    }
+
+}
+
+.view--cases__box {
+    position: absolute;
+    bottom: -49px;
+    left: 188px;
+    padding: to-rem(26px) to-rem(31px) to-rem(26px) to-rem(38px);
+    background-color: #003;
+    border-radius: 0px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 367px;
+    height: 104px;
+
+    .view--cases__box__text {
+        color: $cloud;
+        font-size: to-rem(45px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        display: inline-block;
+        margin-right: to-rem(20px);
+    }
+
+
+}

@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Henju';
+  font-weight: 400;
+  // src: url('../../assets/fonts/TTF/Henju-Regular.ttf') format('truetype'),
+  // url('../../assets/fonts/OTF/Henju-Regular.otf') format('opentype');
+  src:
+    url('../../assets/fonts/Henju-Regular.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Henju';
+  font-weight: 500;
+  // src: url('../../assets/fonts/TTF/Henju-Medium.ttf') format('truetype'),
+  // url('../../assets/fonts/OTF/Henju-Medium.otf') format('opentype');
+  src:
+    url('../../assets/fonts/Henju-Medium.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Henju';
+  font-weight: 700;
+  // src: url('../../assets/fonts/TTF/Henju-SemiBold.ttf') format('truetype'),
+  // url('../../assets/fonts/OTF/Henju-SemiBold.otf') format('opentype');
+  src:
+    url('../../assets/fonts/Henju-SemiBold.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Henju';
+  font-weight: 800;
+  // src: url('../../assets/fonts/TTF/Henju-Bold.ttf') format('truetype'),
+  // url('../../assets/fonts/OTF/Henju-Bold.otf') format('opentype');
+  src:
+    url('../../assets/fonts/Henju-Bold.otf') format('opentype');
+  font-style: bold;
+}
+
+body {
+  font-family: 'Henju', sans-serif;
+  /* Use 'Henju' as the preferred font, with a fallback to system fonts */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+a,
+span,
+table,
+legend {
+  font-family: 'Henju', sans-serif;
+}

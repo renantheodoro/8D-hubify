@@ -1,0 +1,72 @@
+.container {
+  width: 100%;
+  max-width: calc(100% - 100px);
+  margin: 0 auto;
+
+  @media (max-width: 1239px) {
+    width: 90%;
+  }
+}
+
+.row {
+  width: 100%;
+  display: table;
+  margin: {
+    left: -15px;
+    right: -15px;
+  }
+}
+
+.row.row--same-height {
+  @media screen and (min-width: breakpoint('tablet')) {
+    display: flex;
+  }
+
+  [class^="grid"] {
+    flex: 1;
+  }
+}
+
+@mixin grid {
+  padding: 0 16px;
+  margin-left: auto;
+  float: left;
+  min-height: 1px;
+
+  &:first-child {
+    padding-left: 0
+  }
+
+  &:last-child {
+    padding-right: 0
+  }
+}
+
+@for $i from 1 through 16 {
+  .grid-#{$i} {
+    width: $i * 6.25%;
+    @include grid;
+  }
+}
+
+.row {
+  @media (max-width: breakpoint('desktop')) {
+    margin: 0;
+  }
+}
+
+.grid-6,
+.grid-5,
+.grid-4 {
+  @media (max-width: breakpoint('desktop')) {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 0;
+  }
+}
+
+.grid-empty {
+  @media (max-width: breakpoint('desktop')) {
+    display: none;
+  }
+}
