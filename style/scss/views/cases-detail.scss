@@ -104,10 +104,25 @@
             width: 100%;
         }
 
+        &.view--cases-detail__media--video-played.view--cases-detail__media--video-fullscreen {
+            border-radius: 0;
+        }
+
         &.view--cases-detail__media--video-played {
+
             .view--cases-detail__media__play-button {
                 opacity: 0;
             }
+        }
+
+        &.view--cases-detail__media--video-fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+            z-index: 99999;
+            max-width: 100%;
         }
 
         .view--cases-detail__media__play-button {

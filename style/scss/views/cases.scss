@@ -21,16 +21,21 @@
         position: relative;
         display: block;
 
+        width: 50%;
+        height: 719px;
+
+        img {
+            width: 100%;
+        }
+
         &.view--cases__column--b2c {
-            width: 967px;
-            height: 719px;
-            margin-top: -10px;
-            opacity: 1;
+            // margin-top: -10px;
+            // opacity: 1;
         }
 
         &.view--cases__column--b2b {
-            width: 954px;
-            height: 719px;
+            // width: 954px;
+            // height: 719px;
 
             .view--cases__box {
                 left: 312px;
@@ -42,7 +47,7 @@
 
 .view--cases__box {
     position: absolute;
-    bottom: -49px;
+    bottom: -48px;
     left: 188px;
     padding: to-rem(26px) to-rem(31px) to-rem(26px) to-rem(38px);
     background-color: #003;
@@ -50,8 +55,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 367px;
-    height: 104px;
+    width: to-rem(367px);
+    height: to-rem(104px);
 
     .view--cases__box__text {
         color: $cloud;

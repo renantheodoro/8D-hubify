@@ -34,7 +34,6 @@
 
             border-radius: 8px;
 
-            padding: to-rem(32px) to-rem(24px) to-rem(24px) to-rem(24px);
 
             display: inline-block;
 
@@ -42,6 +41,11 @@
 
             &:last-of-type {
                 margin-right: 0;
+            }
+
+            a {
+                padding: to-rem(32px) to-rem(24px) to-rem(24px) to-rem(24px);
+
             }
 
             span,
@@ -74,7 +78,7 @@
                 margin-bottom: to-rem(33px);
             }
 
-            a {
+            .view--cases-list__items__link {
                 color: $cometa;
                 font-size: to-rem(18px);
                 font-style: normal;
