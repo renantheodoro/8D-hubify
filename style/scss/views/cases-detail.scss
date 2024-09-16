@@ -6,6 +6,22 @@
     background-size: contain;
     background-repeat: no-repeat;
 
+    .container {
+        height: 100%;
+
+        .view--cases-detail__row {
+            height: 100%;
+            align-items: flex-start;
+
+            &>[class^="grid-"]:last-of-type {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+
     &.view--cases-detail--image-mode {
         background-image: url('../../assets/images/svg/cases-detail-image-bg.svg');
         background-position: center right;
@@ -23,7 +39,7 @@
     }
 
     .view--cases-detail__top-image {
-        margin-bottom: to-rem(50px);
+        margin-bottom: 1.825rem;
     }
 
     .view--cases-detail__main-title {
@@ -39,7 +55,7 @@
 
     .view--cases-detail__main-text {
         color: #363636;
-        font-size: to-rem(20px);
+        font-size: to-rem(18px);
         font-style: normal;
         font-weight: 400;
         line-height: 121.5%;
@@ -58,8 +74,7 @@
 
         li {
             width: 167px;
-
-            margin-right: to-rem(32px);
+            // padding-right: 4px;
 
             &:last-child {
                 margin-right: 0;
@@ -80,6 +95,8 @@
                 font-weight: 400;
                 line-height: 121.5%;
 
+                display: block;
+
                 margin-bottom: to-rem(38px);
             }
         }
@@ -93,36 +110,60 @@
         display: flex;
         align-items: center;
 
-        border-radius: 1rem;
-
-        overflow: hidden;
-
         position: relative;
+
+        #video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .3);
+            z-index: 4;
+
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        .view--cases-detail__media__container {
+            position: relative;
+
+            &.video-played {
+                .view--cases-detail__media__play-button {
+                    opacity: 0;
+                }
+            }
+
+            &.fullscreen {
+                position: fixed;
+                top: 60px;
+                left: 50px;
+                width: 1820px;
+                height: 960px;
+                z-index: 99999;
+                box-sizing: border-box;
+                z-index: 5;
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &.video-played.fullscreen {
+                border-radius: 0;
+            }
+        }
 
         img,
         video {
             width: 100%;
-        }
-
-        &.view--cases-detail__media--video-played.view--cases-detail__media--video-fullscreen {
-            border-radius: 0;
-        }
-
-        &.view--cases-detail__media--video-played {
-
-            .view--cases-detail__media__play-button {
-                opacity: 0;
-            }
-        }
-
-        &.view--cases-detail__media--video-fullscreen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 1920px;
-            height: 1080px;
-            z-index: 99999;
-            max-width: 100%;
+            border-radius: 1rem;
+            overflow: hidden;
         }
 
         .view--cases-detail__media__play-button {

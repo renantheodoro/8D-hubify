@@ -47,18 +47,18 @@ body,
 }
 
 .qr-code-reveal {
-  position: absolute;
+  position: fixed;
   top: $space-top;
   right: 0;
   z-index: 9;
   transition: ease .1s;
-  transform: translateX(182px);
+  transform: translateX(183px);
 
   z-index: 9;
 
   transition: ease 0.1s;
 
   &.qr-code-reveal--show {
-    transform: translateX(0);
+    transform: translateX(-24px);
   }
 }

@@ -16,6 +16,7 @@ qrCodeBox.addEventListener('click', () => {
  */
 
 const video = document.getElementById("video");
+const videoOverlay = document.getElementById("video-overlay");
 const playButton = document.getElementById("play-button");
 const mediaWrapper = document.getElementById("media-wrapper");
 video.controls = false;
@@ -30,7 +31,8 @@ function requestFullscreen() {
     // } else if (video.msRequestFullscreen) { // Internet Explorer e Edge
     //     video.msRequestFullscreen();
     // }
-    mediaWrapper.classList.add("view--cases-detail__media--video-fullscreen");
+    mediaWrapper.classList.add("fullscreen");
+    videoOverlay.classList.add("active");
 }
 
 function exitFullscreen() {
@@ -44,28 +46,29 @@ function exitFullscreen() {
     //     document.msExitFullscreen();
     // }
 
-    mediaWrapper.classList.remove("view--cases-detail__media--video-fullscreen");
+    mediaWrapper.classList.remove("fullscreen");
+    videoOverlay.classList.remove("active");
 }
 
 playButton.addEventListener("click", function () {
     if (video.paused) {
         video.play();
-        mediaWrapper.classList.add("view--cases-detail__media--video-played");
+        mediaWrapper.classList.add("video-played");
         requestFullscreen();
     } else {
         video.pause();
-        mediaWrapper.classList.remove("view--cases-detail__media--video-played");
+        mediaWrapper.classList.remove("video-played");
     }
 });
 
 video.addEventListener("ended", function () {
-    mediaWrapper.classList.remove("view--cases-detail__media--video-played");
+    mediaWrapper.classList.remove("video-played");
 });
 
 const fullscreenButton = document.getElementById("fullscreen-button");
 
 fullscreenButton.addEventListener("click", function () {
-    if (mediaWrapper.classList.contains("view--cases-detail__media--video-fullscreen")) {
+    if (mediaWrapper.classList.contains("fullscreen")) {
         exitFullscreen();
     } else {
         requestFullscreen();

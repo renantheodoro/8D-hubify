@@ -24,7 +24,7 @@
         width: 50%;
         height: 719px;
 
-        img {
+        img:not(.view--cases__box__icon) {
             width: 100%;
         }
 
@@ -67,6 +67,10 @@
 
         display: inline-block;
         margin-right: to-rem(20px);
+    }
+
+    .view--cases__box__icon {
+        width: auto;
     }
 
 

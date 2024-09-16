@@ -23,14 +23,15 @@
         margin-bottom: to-rem(82px);
     }
 
-    .view--home__qr-code {
-        background-color: $cloud;
-        padding: 10px;
-        border-radius: 8px;
-    }
+    // .view--home__qr-code {
+    //     background-color: $cloud;
+    //     padding: 10px;
+    //     border-radius: 8px;
+    // }
 
     .view--home__thumbnail {
         margin-top: to-rem(110px);
+        min-width: 1192px;
     }
 
     .view--home__column {
